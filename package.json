@@ -1,0 +1,39 @@
+{
+  "name": "sistema-citas-medicas",
+  "version": "1.0.0",
+  "description": "Sistema de citas de médico familiar con auditoría de caja blanca, McCabe y cobertura de ramas",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "caja-blanca",
+    "mccabe",
+    "cobertura-ramas",
+    "qa",
+    "auditoria"
+  ],
+  "author": "Auditor QA",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/rules/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  }
+}
